@@ -41,11 +41,10 @@
 					<BlurFade
 						delay={BLUR_FADE_DELAY}
 						class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-						yOffset={8}>Hi, I'm Giacomo 👋</BlurFade
+						yOffset={8}>Hi, Paco here</BlurFade
 					>
 					<BlurFade class="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY}
-						>Full Stack Developer @lh and IT Engineering Student @unipr. I love building things and
-						learning new stuff.</BlurFade
+						>24 year old something guy.</BlurFade
 					>
 				</div>
 				<BlurFade delay={BLUR_FADE_DELAY}>
@@ -120,7 +119,7 @@
 		</div>
 	</section>
 
-	<section id="projects">
+	<!-- <section id="projects">
 		<div class="w-full space-y-12 py-12">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
@@ -157,9 +156,9 @@
 				{/each}
 			</div>
 		</div>
-	</section>
+	</section> -->
 
-	<section id="hackathons">
+	<!-- <section id="hackathons">
 		<div class="w-full space-y-12 py-12">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
@@ -190,24 +189,19 @@
 				</ul>
 			</BlurFade>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="contact">
 		<div class="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
 			<BlurFade delay={BLUR_FADE_DELAY * 2}>
 				<div class="space-y-3">
-					<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
-						Contact
-					</div>
-					<h2 class="text-3xl font-bold tracking-tight sm:text-5xl">Get in Touch</h2>
+					<div
+						class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background"
+					></div>
 					<p
 						class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 					>
-						Want to chat? Just shoot me a dm
-						<a href={DATA.contact.social.X.url} class="text-blue-500 hover:underline">
-							with a direct question on twitter
-						</a>
-						and I&apos;ll respond whenever I can. I will ignore all soliciting.
+						say hello on <a href={DATA.contact.social.X.url}>𝕏</a>
 					</p>
 				</div>
 			</BlurFade>

@@ -37,7 +37,7 @@ export let DATA = {
 	description:
 		'Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.',
 	summary:
-		'At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Sil// icon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).',
+		'tldr; learnt by hacking around on the internet.\n\ni like technology and deep science. they make a dent in the universe.\n\ni deeply study art, history, football and great books.',
 	avatarUrl: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
 	skills: [
 		'Svelte',
