@@ -16,15 +16,15 @@ import TwitterSvg from '$lib/imgs/x.svg';
 import TwitterDarkSvg from '$lib/imgs/x-dark.svg';
 
 import AtomicImg from '$lib/imgs/atomic.png';
-import ShopifyImg from '$lib/imgs/shopify.svg';
-import NvidiaImg from '$lib/imgs/nvidia.png';
-import SplunkImg from '$lib/imgs/splunk.svg';
-import LimeImg from '$lib/imgs/lime.svg';
-import MitreMediaImg from '$lib/imgs/mitremedia.png';
-import BuildSpaceImg from '$lib/imgs/buildspace.jpg';
-import WaterLooImg from '$lib/imgs/waterloo.png';
-import LaurierImg from '$lib/imgs/laurier.png';
-import IBImg from '$lib/imgs/ib.png';
+// import ShopifyImg from '$lib/imgs/shopify.svg';
+// import NvidiaImg from '$lib/imgs/nvidia.png';
+// import SplunkImg from '$lib/imgs/splunk.svg';
+// import LimeImg from '$lib/imgs/lime.svg';
+// import MitreMediaImg from '$lib/imgs/mitremedia.png';
+// import BuildSpaceImg from '$lib/imgs/buildspace.jpg';
+// import WaterLooImg from '$lib/imgs/waterloo.png';
+// import LaurierImg from '$lib/imgs/laurier.png';
+// import IBImg from '$lib/imgs/ib.png';
 
 // Your resume data
 export let DATA = {
