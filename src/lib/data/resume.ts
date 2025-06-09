@@ -31,7 +31,7 @@ export let DATA = {
 	name: 'Giacomo Folli',
 	initials: 'GF',
 	url: 'https://github.com/giacomo-folli',
-	img: 'https://i.pinimg.com/736x/9e/dc/a6/9edca66eba199828bda2dbaf35642154.jpg',
+	img: 'https://giacomofolli.com/profile.png',
 	location: 'Parma, Italy',
 	locationLink: 'https://www.google.com/maps/place/parma',
 	description:
