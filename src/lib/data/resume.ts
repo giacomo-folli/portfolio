@@ -38,19 +38,14 @@ export let DATA = {
 		'Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.',
 	summary:
 		'tldr; learnt by hacking around on the internet.\n\ni like technology and deep science. they make a dent in the universe.\n\ni deeply study art, history, football and great books.',
-	avatarUrl: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
+	avatarUrl: 'https://giacomofolli.com/profile.png',
 	skills: [
 		'Svelte',
-		'Sveltekit',
 		'Typescript',
-		'Node.js',
-		'Python',
-		'Go',
-		'Postgres',
-		'Redis',
 		'Docker',
+		'Python',
 		'Linux',
-		'Dart'
+		'Slow runs on strava',
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
@@ -85,14 +80,14 @@ export let DATA = {
 				navbar: true,
 				dark_icon: TwitterDarkSvg
 			},
-			PeerList: {
-				name: 'PeerList',
-				url: 'https://peerlist.io/bhide',
-				// // icon: Icons.x,
-				icon: PeerListSvg,
-				navbar: true,
-				dark_icon: PeerListDarkSvg
-			},
+			// PeerList: {
+			// 	name: 'PeerList',
+			// 	url: 'https://peerlist.io/bhide',
+			// 	// // icon: Icons.x,
+			// 	icon: PeerListSvg,
+			// 	navbar: true,
+			// 	dark_icon: PeerListDarkSvg
+			// },
 			// Youtube: {
 			// 	name: 'Youtube',
 			// 	url: 'https://github.com/SikandarJODD',
