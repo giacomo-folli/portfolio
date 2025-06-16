@@ -38,7 +38,7 @@ export let DATA = {
 	skills: ['Svelte', 'Typescript', 'Docker', 'Python', 'Linux', 'Slow runs on strava'],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
-		{ href: '/blog', icon: NotebookIcon, label: 'Blog' },
+		{ href: 'https://medium.com/@pvco', icon: NotebookIcon, label: 'Blog' },
 		{ href: '#', icon: CodeIcon, label: 'Projects' }
 	],
 	contact: {
