@@ -19,7 +19,7 @@
 <div
 	class="flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:shadow-lg rounded-lg bg-card text-card-foreground"
 >
-	<a href={href || '#'} class="block cursor-pointer">
+	<a href={href || '#'} class="block cursor-pointer" class:hidden={!video && !image}>
 		{#if video}
 			<video
 				class="pointer-events-none mx-auto h-40 w-full object-cover object-top"

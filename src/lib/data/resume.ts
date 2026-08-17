@@ -1,4 +1,4 @@
-import { CodeIcon, HomeIcon, NotebookIcon } from 'lucide-svelte';
+import { CodeIcon, Github, HomeIcon, NotebookIcon } from 'lucide-svelte';
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
@@ -29,21 +29,42 @@ export let DATA = {
 	initials: 'GF',
 	url: 'https://github.com/giacomo-folli',
 	img: 'https://giacomofolli.com/profile.png',
-	location: 'Parma, Italy',
-	locationLink: 'https://www.google.com/maps/place/parma',
-	description: 'Software Developer, Engineering Student, OS Mantainer. I like computers & co.',
+	location: 'Salsomaggiore Terme (PR), Italy',
+	locationLink: 'https://www.google.com/maps/place/salsomaggiore+terme',
+	description: 'Full-Stack Software Developer, Engineering Student, OS Mantainer. I like computers & co.',
 	summary:
-		'tldr; learnt by hacking around on the internet.\n\ni like technology and deep science. they make a dent in the universe.\n\ni like to surround myself with music, electronics and friends.',
+		'tldr; learnt by hacking around on the internet.\n\nfull-stack developer with production experience in Svelte, Node.js, AdonisJS, PostgreSQL and MongoDB. next to client work i keep open source side projects alive, from system programming in Rust and Go to AI integrations.\n\ni like technology and deep science. they make a dent in the universe.\n\ni like to surround myself with music, electronics and friends.',
 	avatarUrl: 'https://giacomofolli.com/profile.png',
-	skills: ['Svelte', 'Typescript', 'Docker', 'Python', 'Linux', 'Slow runs on strava'],
+	skills: [
+		'Typescript',
+		'Javascript',
+		'Svelte / SvelteKit',
+		'React',
+		'Node.js',
+		'AdonisJS',
+		'Go',
+		'Rust',
+		'Python',
+		'SQL',
+		'PostgreSQL',
+		'MongoDB',
+		'Redis',
+		'BullMQ',
+		'Docker',
+		'CI/CD',
+		'Git',
+		'Linux',
+		'Agile/Scrum',
+		'Slow runs on strava'
+	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
 		{ href: 'https://medium.com/@pvco', icon: NotebookIcon, label: 'Blog' },
-		{ href: '#', icon: CodeIcon, label: 'Projects' }
+		{ href: '#projects', icon: CodeIcon, label: 'Projects' }
 	],
 	contact: {
-		email: 'giacomofolli@proton.com',
-		tel: '+123456789',
+		email: 'giacomofolli@proton.me',
+		tel: '+39 324 824 6374',
 		social: {
 			GitHub: {
 				name: 'GitHub',
@@ -96,32 +117,131 @@ export let DATA = {
 	},
 	work: [
 		{
-			company: 'Likable Hair',
+			company: 'Self Employed',
+			href: 'https://github.com/giacomo-folli',
+			badges: ['Freelance'],
+			location: 'Remote, IT',
+			title: 'Freelance Software Developer',
+			logoUrl: '/logo.png',
+			start: 'Nov 2023',
+			end: 'Ongoing',
+			description:
+				'Design and development of responsive showcase websites and web applications for a range of clients, owning the whole project lifecycle from requirements to deployment. Built performant frontends with Svelte and TypeScript, with a focus on accessibility and loading speed. Handled client relationships directly, ensuring on-time delivery and high code quality standards.'
+		},
+		{
+			company: 'LH s.r.l.',
 			href: 'https://likablehair.it',
 			badges: [],
 			location: 'Piacenza, IT',
-			title: 'Full Stack Developer',
+			title: 'Web Application Developer',
 			logoUrl: '/lh.png',
-			start: 'Sep 2023',
-			end: 'Ongoing',
+			start: 'Nov 2023',
+			end: 'Dec 2025',
 			description:
-				'Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.'
+				'Development and maintenance of full-stack web platforms with Svelte, Node.js and AdonisJS, integrating PostgreSQL and MongoDB. Optimized Docker-based CI/CD pipelines, improving release reliability and speed. Implemented asynchronous job scheduling with BullMQ, secure authentication systems and internationalization (i18n). Worked in an Agile team, contributing to internal open source projects (Likable Tools).'
 		}
 	],
 	education: [
 		{
 			school: 'Università degli Studi di Parma',
 			href: 'https://www.unipr.it/',
-			degree: "Bachelor's Degree of IT Engineering",
+			degree:
+				"Bachelor's Degree in IT Engineering — Software and Applications Development and Analysis (EQF level 6)",
 			logoUrl: '/unipr.png',
-			start: '2020',
-			end: '2025'
+			start: '2021',
+			end: 'Ongoing'
 		}
 	],
-	projects: [
-		// ... (unchanged)
+	certifications: [
+		{
+			name: 'Google Cybersecurity Professional Certificate',
+			issuer: 'Coursera',
+			date: 'Sep 2025'
+		},
+		{
+			name: 'Google UX Design Professional Certificate',
+			issuer: 'Coursera',
+			date: 'Oct 2024'
+		}
 	],
-	hackathons: [
-		// ... (unchanged)
-	]
+	languages: [
+		{ name: 'Italian', level: 'Native' },
+		{ name: 'English', level: 'C1 comprehension · B2 written and spoken' },
+		{ name: 'French', level: 'A2' }
+	],
+	projects: [
+		{
+			title: 'asmlings',
+			href: 'https://github.com/giacomo-folli/asmlings',
+			dates: '2025',
+			active: true,
+			description:
+				'Educational sandbox for Intel 8086 assembly programming, built around an emulator written from scratch in Rust.',
+			technologies: ['Rust', 'Assembly', 'Intel 8086', 'Systems Programming'],
+			links: [
+				{
+					type: 'Source',
+					href: 'https://github.com/giacomo-folli/asmlings',
+					icon: Github
+				}
+			],
+			image: '',
+			video: ''
+		},
+		{
+			title: 'strava-ai',
+			href: 'https://github.com/giacomo-folli/strava-ai',
+			dates: '2025',
+			active: true,
+			description:
+				'AI powered running coach integrated with the Strava APIs, providing training analysis and personalized recommendations.',
+			technologies: ['SvelteKit', 'Typescript', 'Strava API', 'AI'],
+			links: [
+				{
+					type: 'Source',
+					href: 'https://github.com/giacomo-folli/strava-ai',
+					icon: Github
+				}
+			],
+			image: '',
+			video: ''
+		},
+		{
+			title: 'reflectiv',
+			href: 'https://github.com/giacomo-folli/reflectiv',
+			dates: '2024 — archived',
+			active: false,
+			description:
+				'Web app that generates personalized monthly reflection journals as PDFs through AI. Archived.',
+			technologies: ['Svelte', 'Typescript', 'AI', 'PDF'],
+			links: [
+				{
+					type: 'Source',
+					href: 'https://github.com/giacomo-folli/reflectiv',
+					icon: Github
+				}
+			],
+			image: '',
+			video: ''
+		},
+		{
+			title: 'go-shell',
+			href: 'https://github.com/giacomo-folli/go-shell',
+			dates: '2024',
+			active: true,
+			description:
+				'Unix-like shell implemented from scratch in Go, to dig into process management and system programming.',
+			technologies: ['Go', 'Unix', 'Systems Programming'],
+			links: [
+				{
+					type: 'Source',
+					href: 'https://github.com/giacomo-folli/go-shell',
+					icon: Github
+				}
+			],
+			image: '',
+			video: ''
+		}
+	],
+	hackathons: []
 };

@@ -119,7 +119,7 @@
 		</div>
 	</section>
 
-	<!-- <section id="projects">
+	<section id="projects">
 		<div class="w-full space-y-12 py-12">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
@@ -133,8 +133,8 @@
 						<p
 							class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 						>
-							I&apos;ve worked on a variety of projects, from simple websites to mobile apps. Here
-							are a few of my favorites.
+							Open source side projects I build and maintain to explore languages and problems
+							outside my day to day work.
 						</p>
 					</div>
 				</div>
@@ -156,7 +156,7 @@
 				{/each}
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<!-- <section id="hackathons">
 		<div class="w-full space-y-12 py-12">
