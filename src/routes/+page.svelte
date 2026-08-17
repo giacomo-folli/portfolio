@@ -41,7 +41,7 @@
 					<BlurFade
 						delay={BLUR_FADE_DELAY}
 						class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-						yOffset={8}>Hi, Paco here</BlurFade
+						yOffset={8}>Hi, Giacomo here</BlurFade
 					>
 					<BlurFade class="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY}
 						>24 year old something guy.</BlurFade
