@@ -118,7 +118,7 @@
 			<div class="flex flex-wrap gap-1">
 				{#each DATA.skills as skill, id}
 					<BlurFade delay={BLUR_FADE_DELAY * id + 0.002}>
-						<Badge>{skill}</Badge>
+						<Badge class={skill.class}>{skill.title}</Badge>
 					</BlurFade>
 				{/each}
 			</div>

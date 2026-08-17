@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { marked } from 'marked';
+	import { ArrowUpRightIcon } from 'lucide-svelte';
 	import Badge from '../ui/badge/badge.svelte';
 
 	let _class = '';
@@ -13,6 +14,12 @@
 	export let image: string = '';
 	export let video: string = '';
 	export let links: { icon: any; type: string; href: string; internal?: boolean }[] = [];
+
+	const isPostLink = (entry: (typeof links)[number]) => entry.href?.startsWith('/blog/');
+
+	// The write-up gets the lead position and the only filled treatment in the footer.
+	$: postLink = links.find(isPostLink);
+	$: otherLinks = links.filter((entry) => !isPostLink(entry));
 </script>
 
 <!-- Card -->
@@ -63,11 +70,27 @@
 	<!-- Card Footer -->
 	<div class="px-2 pb-2 flex items-center pt-2">
 		{#if links && links.length > 0}
-			<div class="flex flex-row flex-wrap items-start gap-1">
-				{#each links as link}
+			<div class="flex flex-row flex-wrap items-center gap-1">
+				{#if postLink}
+					<a
+						href={postLink.href}
+						target={postLink.internal ? undefined : '_blank'}
+						class="group/post inline-flex items-center gap-1 rounded-full bg-primary px-2 py-1 text-[10px] font-medium text-primary-foreground ring-1 ring-inset ring-white/10 transition-colors hover:bg-primary/90"
+					>
+						<svelte:component this={postLink.icon} class="size-3 mb-px" strokeWidth={1.6} />
+						{postLink.type}
+						<ArrowUpRightIcon
+							class="size-2.5 opacity-70 transition-transform duration-200 ease-out group-hover/post:translate-x-px group-hover/post:-translate-y-px"
+							strokeWidth={2}
+						/>
+					</a>
+				{/if}
+				{#each otherLinks as link}
 					<a href={link?.href} target={link?.internal ? undefined : '_blank'}>
-						<Badge class="flex gap-1 px-2 py-1 text-[10px] items-center justify-center">
-							<!-- {link.icon} -->
+						<Badge
+							variant="outline"
+							class="flex gap-1 px-2 py-1 text-[10px] items-center justify-center border-border text-muted-foreground transition-colors hover:border-foreground/25 hover:text-foreground"
+						>
 							<svelte:component this={link.icon} class="size-3 mb-px" strokeWidth={1.6} />
 							{link.type}
 						</Badge>
