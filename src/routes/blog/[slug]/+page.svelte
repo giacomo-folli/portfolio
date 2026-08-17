@@ -2,12 +2,14 @@
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
+	import { getProjectForPost } from '$lib/relations';
 	import { formatDate } from '$lib/utils';
-	import { SparklesIcon } from 'lucide-svelte';
+	import { CodeIcon, SparklesIcon } from 'lucide-svelte';
 
 	export let data;
 
 	$: aiAssisted = data.meta['ai_assisted'] === true;
+	$: relatedProject = getProjectForPost(data.meta['project']);
 </script>
 
 <!-- SEO -->
@@ -42,7 +44,7 @@
 <article>
 	<!-- Title -->
 	<hgroup class="mb-1">
-		<h1 class="title max-w-[650px] text-2xl font-medium capitalize tracking-tighter">
+		<h1 class="title max-w-[650px] text-3xl font-medium capitalize tracking-tighter">
 			{data.meta.title}
 		</h1>
 		<div class="mb-3 mt-2 flex max-w-[650px] items-center justify-between text-sm">
@@ -68,12 +70,24 @@
 			<Badge variant="outline" class="rounded-[4px]">{category}</Badge>
 		{/each}
 	</div>
+
+	<!-- Related project -->
+	{#if relatedProject}
+		<p class="mb-2 flex items-center gap-1 text-xs text-muted-foreground">
+			<CodeIcon class="size-3" strokeWidth={1.5} />
+			Related project:
+			<a href="/#projects" class="underline underline-offset-2 hover:text-foreground">
+				{relatedProject.title}
+			</a>
+		</p>
+	{/if}
+
 	<Separator class="mb-4" />
 
 	<!-- Post -->
 	<div
-		class="prose-video prose-ol:my2 prose dark:prose-invert
-				prose-h1:my-1 prose-h2:mb-2 prose-h2:mt-6 prose-h3:my-1 prose-p:mb-0.5 prose-a:my-3
+		class="post-body prose-video prose-ol:my2 prose dark:prose-invert
+				prose-h1:my-1 prose-h2:mb-2 prose-h2:mt-6 prose-h2:font-medium prose-h3:my-1 prose-p:mb-0.5 prose-a:my-3
 				prose-blockquote:my-3 prose-figcaption:my-3 prose-pre:my-3 prose-ul:my-3
 				prose-table:border-b last:prose-table:border-b prose-thead:border
 				prose-thead:bg-zinc-100 prose-th:border prose-td:border-x prose-td:text-center
@@ -83,3 +97,16 @@
 		<svelte:component this={data.content} />
 	</div>
 </article>
+
+<style lang="postcss">
+	/* Inline code (`like this`) — mdsvex only highlights fenced blocks, so style
+	   inline <code> ourselves and drop the backticks typography adds. */
+	.post-body :global(:not(pre) > code) {
+		@apply rounded-[4px] border bg-muted px-1 py-0.5 font-mono text-[0.85em] font-normal text-foreground;
+	}
+
+	.post-body :global(:not(pre) > code::before),
+	.post-body :global(:not(pre) > code::after) {
+		content: none;
+	}
+</style>

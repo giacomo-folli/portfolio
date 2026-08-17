@@ -156,7 +156,7 @@ export let DATA = {
 			school: 'Università degli Studi di Parma',
 			href: 'https://www.unipr.it/',
 			degree:
-				"Bachelor's Degree in IT Engineering — Software and Applications Development and Analysis (EQF level 6)",
+				"Ingegneria Informatica, Bachelor",
 			logoUrl: '/unipr.png',
 			start: '2021',
 			end: 'Ongoing'

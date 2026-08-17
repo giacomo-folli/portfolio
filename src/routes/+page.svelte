@@ -1,14 +1,19 @@
-<script>
+<script lang="ts">
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
-	import HackathonCard from '$lib/components/portfolio/HackathonCard.svelte';
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import { DATA } from '$lib/data/resume';
+	import { buildPostByProject, relatedPostLink } from '$lib/relations';
 	import { marked } from 'marked';
+
+	export let data: any;
+
 	let BLUR_FADE_DELAY = 0.04;
 	const age = new Date().getFullYear() - DATA.birth_year;
+
+	$: postByProject = buildPostByProject(data.posts);
 </script>
 
 <svelte:head>
@@ -94,7 +99,7 @@
 					<ResumeCard
 						href={edu.href}
 						logoUrl={edu.logoUrl}
-						company={edu.school}
+						company={edu.degree}
 						title={edu.school}
 						subtitle={edu.degree}
 						start={edu.start}
@@ -151,7 +156,7 @@
 							tags={project.technologies}
 							image={project.image}
 							video={project.video}
-							links={project.links}
+							links={[...project.links, ...relatedPostLink(postByProject[project.title])]}
 						/>
 					</BlurFade>
 				{/each}

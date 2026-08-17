@@ -15,4 +15,6 @@ export type Post = {
 	categories: Categories[]
 	published: boolean
 	ai_assisted?: boolean
+	/** Title of the related entry in DATA.projects, if the post is about one. */
+	project?: string
 }

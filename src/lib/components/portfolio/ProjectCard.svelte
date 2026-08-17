@@ -12,7 +12,7 @@
 	export let link: string = '';
 	export let image: string = '';
 	export let video: string = '';
-	export let links: { icon: any; type: string; href: string }[] = [];
+	export let links: { icon: any; type: string; href: string; internal?: boolean }[] = [];
 </script>
 
 <!-- Card -->
@@ -65,7 +65,7 @@
 		{#if links && links.length > 0}
 			<div class="flex flex-row flex-wrap items-start gap-1">
 				{#each links as link}
-					<a href={link?.href} target="_blank">
+					<a href={link?.href} target={link?.internal ? undefined : '_blank'}>
 						<Badge class="flex gap-1 px-2 py-1 text-[10px] items-center justify-center">
 							<!-- {link.icon} -->
 							<svelte:component this={link.icon} class="size-3 mb-px" strokeWidth={1.6} />

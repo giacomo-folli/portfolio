@@ -7,6 +7,7 @@ categories:
   - systems
 published: true
 ai_assisted: true
+project: asmlings
 ---
 
 ## Why I built it

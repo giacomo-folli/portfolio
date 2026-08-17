@@ -7,6 +7,7 @@ categories:
   - sveltekit
 published: true
 ai_assisted: true
+project: strava-ai
 ---
 
 ## The idea
