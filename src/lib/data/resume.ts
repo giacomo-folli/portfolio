@@ -12,7 +12,9 @@ import LinkedinDarkSvg from '$lib/imgs/linkedin-dark.svg';
 import TwitterSvg from '$lib/imgs/x.svg';
 import TwitterDarkSvg from '$lib/imgs/x-dark.svg';
 
-import AtomicImg from '$lib/imgs/atomic.png';
+import MediumSvg from '$lib/imgs/medium.svg';
+import MediumDarkSvg from '$lib/imgs/medium-dark.svg';
+
 // import ShopifyImg from '$lib/imgs/shopify.svg';
 // import NvidiaImg from '$lib/imgs/nvidia.png';
 // import SplunkImg from '$lib/imgs/splunk.svg';
@@ -27,6 +29,7 @@ import AtomicImg from '$lib/imgs/atomic.png';
 export let DATA = {
 	name: 'Giacomo Folli',
 	initials: 'GF',
+	birth_year: 2001,
 	url: 'https://github.com/giacomo-folli',
 	img: 'https://giacomofolli.com/profile.png',
 	location: 'Salsomaggiore Terme (PR), Italy',
@@ -59,7 +62,7 @@ export let DATA = {
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
-		{ href: 'https://medium.com/@pvco', icon: NotebookIcon, label: 'Blog' },
+		{ href: '/blog', icon: NotebookIcon, label: 'Blog' },
 		{ href: '#projects', icon: CodeIcon, label: 'Projects' }
 	],
 	contact: {
@@ -89,6 +92,13 @@ export let DATA = {
 				icon: TwitterSvg,
 				navbar: true,
 				dark_icon: TwitterDarkSvg
+			},
+			Medium: {
+				name: 'Medium',
+				url: 'https://medium.com/@pvco',
+				icon: MediumSvg,
+				navbar: true,
+				dark_icon: MediumDarkSvg
 			},
 			// PeerList: {
 			// 	name: 'PeerList',

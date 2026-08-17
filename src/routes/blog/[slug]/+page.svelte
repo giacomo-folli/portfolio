@@ -3,8 +3,11 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import { formatDate } from '$lib/utils';
+	import { SparklesIcon } from 'lucide-svelte';
 
 	export let data;
+
+	$: aiAssisted = data.meta['ai_assisted'] === true;
 </script>
 
 <!-- SEO -->
@@ -46,6 +49,16 @@
 			<p class="text-sm text-neutral-600 dark:text-neutral-400">
 				{formatDate(data.meta.date)}
 			</p>
+			{#if aiAssisted}
+				<Badge
+					variant="outline"
+					class="gap-1 rounded-[4px] font-normal text-muted-foreground"
+					title="This post was drafted and edited with the help of AI tools"
+				>
+					<SparklesIcon class="size-3" strokeWidth={1.5} />
+					Written with AI help
+				</Badge>
+			{/if}
 		</div>
 	</hgroup>
 
@@ -59,7 +72,13 @@
 
 	<!-- Post -->
 	<div
-		class=" prose-video prose-ol:my2 prose dark:prose-invert prose-h1:my-1 prose-h2:my-1 prose-h3:my-1 prose-p:my-0 prose-a:my-3 prose-blockquote:my-3 prose-figcaption:my-3 prose-pre:my-3 prose-ul:my-3 prose-table:border-b last:prose-table:border-b prose-thead:border prose-thead:bg-zinc-100 prose-th:border prose-td:border-x prose-td:text-center prose-img:mx-auto prose-img:my-3 prose-img:text-center prose-hr:my-3 dark:prose-thead:bg-zinc-900"
+		class="prose-video prose-ol:my2 prose dark:prose-invert
+				prose-h1:my-1 prose-h2:mb-2 prose-h2:mt-6 prose-h3:my-1 prose-p:mb-0.5 prose-a:my-3
+				prose-blockquote:my-3 prose-figcaption:my-3 prose-pre:my-3 prose-ul:my-3
+				prose-table:border-b last:prose-table:border-b prose-thead:border
+				prose-thead:bg-zinc-100 prose-th:border prose-td:border-x prose-td:text-center
+				prose-img:mx-auto prose-img:my-3 prose-img:text-center prose-hr:my-3
+				dark:prose-thead:bg-zinc-900"
 	>
 		<svelte:component this={data.content} />
 	</div>

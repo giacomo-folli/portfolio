@@ -8,6 +8,7 @@
 	import { DATA } from '$lib/data/resume';
 	import { marked } from 'marked';
 	let BLUR_FADE_DELAY = 0.04;
+	const age = new Date().getFullYear() - DATA.birth_year;
 </script>
 
 <svelte:head>
@@ -44,7 +45,7 @@
 						yOffset={8}>Hi, Giacomo here</BlurFade
 					>
 					<BlurFade class="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY}
-						>24 year old something guy.</BlurFade
+						>{age} year old something guy.</BlurFade
 					>
 				</div>
 				<BlurFade delay={BLUR_FADE_DELAY}>
