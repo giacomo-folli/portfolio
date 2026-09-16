@@ -13,7 +13,13 @@
 	export let link: string = '';
 	export let image: string = '';
 	export let video: string = '';
-	export let links: { icon: any; type: string; href: string; internal?: boolean }[] = [];
+	export let links: {
+		icon: any;
+		type: string;
+		href: string;
+		internal?: boolean;
+		class?: string;
+	}[] = [];
 
 	const isPostLink = (entry: (typeof links)[number]) => entry.href?.startsWith('/blog/');
 
@@ -24,7 +30,7 @@
 
 <!-- Card -->
 <div
-	class="flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:shadow-lg rounded-lg bg-card text-card-foreground"
+	class="flex h-full flex-col overflow-hidden rounded-lg border bg-card text-card-foreground transition-all duration-300 ease-out hover:shadow-lg"
 >
 	<a href={href || '#'} class="block cursor-pointer" class:hidden={!video && !image}>
 		{#if video}
@@ -40,7 +46,7 @@
 		{/if}
 	</a>
 	<!-- Card Header -->
-	<div class="px-2 flex flex-col">
+	<div class="flex flex-col px-2">
 		<div class="space-y-1">
 			<!-- Card Title -->
 			<div class="mt-1 text-base">{title}</div>
@@ -49,14 +55,14 @@
 				{link?.replace('https://', '').replace('www.', '').replace('/', '')}
 			</div>
 			<div
-				class="prose dark:prose-invert max-w-full text-pretty font-sans text-xs text-muted-foreground"
+				class="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert"
 			>
 				{@html marked(description)}
 			</div>
 		</div>
 	</div>
 	<!-- Card Content -->
-	<div class="mt-auto flex flex-col px-2 text-pretty font-sans text-sm text-muted-foreground">
+	<div class="mt-auto flex flex-col text-pretty px-2 font-sans text-sm text-muted-foreground">
 		{#if tags && tags.length > 0}
 			<div class="mt-2 flex flex-wrap gap-1">
 				{#each tags as tag}
@@ -68,7 +74,7 @@
 		{/if}
 	</div>
 	<!-- Card Footer -->
-	<div class="px-2 pb-2 flex items-center pt-2">
+	<div class="flex items-center px-2 pb-2 pt-2">
 		{#if links && links.length > 0}
 			<div class="flex flex-row flex-wrap items-center gap-1">
 				{#if postLink}
@@ -77,10 +83,10 @@
 						target={postLink.internal ? undefined : '_blank'}
 						class="group/post inline-flex items-center gap-1 rounded-full bg-primary px-2 py-1 text-[10px] font-medium text-primary-foreground ring-1 ring-inset ring-white/10 transition-colors hover:bg-primary/90"
 					>
-						<svelte:component this={postLink.icon} class="size-3 mb-px" strokeWidth={1.6} />
+						<svelte:component this={postLink.icon} class="mb-px size-3" strokeWidth={1.6} />
 						{postLink.type}
 						<ArrowUpRightIcon
-							class="size-2.5 opacity-70 transition-transform duration-200 ease-out group-hover/post:translate-x-px group-hover/post:-translate-y-px"
+							class="size-2.5 opacity-70 transition-transform duration-200 ease-out group-hover/post:-translate-y-px group-hover/post:translate-x-px"
 							strokeWidth={2}
 						/>
 					</a>
@@ -89,9 +95,9 @@
 					<a href={link?.href} target={link?.internal ? undefined : '_blank'}>
 						<Badge
 							variant="outline"
-							class="flex gap-1 px-2 py-1 text-[10px] items-center justify-center border-border text-muted-foreground transition-colors hover:border-foreground/25 hover:text-foreground"
+							class="flex items-center justify-center gap-1 border-border px-2 py-1 text-[10px] text-muted-foreground transition-colors hover:border-foreground/25 hover:text-foreground {link.class}"
 						>
-							<svelte:component this={link.icon} class="size-3 mb-px" strokeWidth={1.6} />
+							<svelte:component this={link.icon} class="mb-px size-3" strokeWidth={1.6} />
 							{link.type}
 						</Badge>
 					</a>

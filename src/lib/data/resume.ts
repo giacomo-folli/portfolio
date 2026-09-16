@@ -1,4 +1,4 @@
-import { CodeIcon, Github, HomeIcon, NotebookIcon } from 'lucide-svelte';
+import { ChartNetwork, CodeIcon, Github, Globe, HomeIcon, NotebookIcon } from 'lucide-svelte';
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
@@ -193,6 +193,12 @@ export let DATA = {
 					type: 'Source',
 					href: 'https://github.com/giacomo-folli/asmlings',
 					icon: Github
+				},
+				{
+					type: 'Website',
+					href: 'https://giacomo-folli.github.io/asmlings-web',
+					icon: Globe,
+					class: 'bg-[#00aa0022] border-[#00aa0099] hover:border-[#00aa0099]'
 				}
 			],
 			image: '',
@@ -211,6 +217,12 @@ export let DATA = {
 					type: 'Source',
 					href: 'https://github.com/giacomo-folli/strava-ai',
 					icon: Github
+				},
+				{
+					type: 'Website',
+					href: 'https://strava.giacomofolli.com/',
+					icon: Globe,
+					class: 'bg-[#fc520022] border-[#fc520099] hover:border-[#fc520099]'
 				}
 			],
 			image: '',
