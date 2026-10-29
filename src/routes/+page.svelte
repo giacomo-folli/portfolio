@@ -3,7 +3,7 @@
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
-	import Badge from '$lib/components/ui/badge/badge.svelte';
+	// import Badge from '$lib/components/ui/badge/badge.svelte';
 	import { DATA } from '$lib/data/resume';
 	import { buildPostByProject, relatedPostLink } from '$lib/relations';
 	import { marked } from 'marked';
@@ -89,7 +89,7 @@
 		</div>
 	</section>
 
-	<section id="education">
+	<!-- <section id="education">
 		<div class="flex min-h-0 flex-col gap-y-3">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<h2 class="text-xl font-bold">Education</h2>
@@ -108,9 +108,9 @@
 				</BlurFade>
 			{/each}
 		</div>
-	</section>
+	</section> -->
 
-	<section id="skills">
+	<!-- <section id="skills">
 		<div class="flex min-h-0 flex-col gap-y-3">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<h2 class="text-xl font-bold">Skills</h2>
@@ -123,44 +123,47 @@
 				{/each}
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="projects">
-		<div class="w-full space-y-12 py-12">
+		<div class="w-full">
 			<BlurFade delay={BLUR_FADE_DELAY}>
-				<div class="flex flex-col items-center justify-center space-y-4 text-center">
-					<div class="space-y-2">
-						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
-							My Projects
-						</div>
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
-							Check out my latest work
-						</h2>
-						<p
-							class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-						>
-							Open source side projects I build and maintain to explore languages and problems
-							outside my day to day work.
-						</p>
+				<div class="flex flex-col space-y-2">
+					<div class="inline-flex w-fit rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+						My Projects
 					</div>
+					<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Things I build and keep alive</h2>
+					<p class="max-w-[600px] text-pretty text-muted-foreground md:text-lg">
+						A walk through the open source projects I've built and maintained, from system
+						programming to web apps.
+					</p>
 				</div>
 			</BlurFade>
-			<div class="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
+
+			<ol
+				class="relative mt-10 space-y-10 before:absolute before:bottom-4 before:left-0 before:top-2 before:w-px before:bg-gradient-to-b before:from-border before:via-border before:to-transparent"
+			>
 				{#each DATA.projects as project, id}
-					<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
-						<ProjectCard
-							href={project.href}
-							title={project.title}
-							description={project.description}
-							dates={project.dates}
-							tags={project.technologies}
-							image={project.image}
-							video={project.video}
-							links={[...project.links, ...relatedPostLink(postByProject[project.title])]}
-						/>
-					</BlurFade>
+					<li class="relative pl-8">
+						<span
+							aria-hidden="true"
+							class="absolute left-0 top-[5px] size-2.5 -translate-x-1/2 rounded-full border-2 border-background bg-foreground"
+						></span>
+						<BlurFade delay={id * 0.06} yOffset={12}>
+							<ProjectCard
+								href={project.href}
+								title={project.title}
+								description={project.description}
+								dates={project.dates}
+								tags={project.technologies}
+								image={project.image}
+								video={project.video}
+								links={[...project.links, ...relatedPostLink(postByProject[project.title])]}
+							/>
+						</BlurFade>
+					</li>
 				{/each}
-			</div>
+			</ol>
 		</div>
 	</section>
 
@@ -197,7 +200,7 @@
 		</div>
 	</section> -->
 
-	<section id="contact">
+	<!-- <section id="contact">
 		<div class="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
 			<BlurFade delay={BLUR_FADE_DELAY * 2}>
 				<div class="space-y-3">
@@ -212,5 +215,5 @@
 				</div>
 			</BlurFade>
 		</div>
-	</section>
+	</section> -->
 </main>
