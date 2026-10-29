@@ -1,13 +1,13 @@
 <script>
-	import Footer from '$lib/components/portfolio/Footer.svelte';
-	import { ModeWatcher, setMode } from 'mode-watcher';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import { dev } from '$app/environment';
-	import '../app.css';
+	import Footer from "$lib/components/portfolio/Footer.svelte";
+	import { ModeWatcher, setMode } from "mode-watcher";
+	import { injectAnalytics } from "@vercel/analytics/sveltekit";
+	import { dev } from "$app/environment";
+	import "../app.css";
 
-	setMode('dark');
+	setMode("dark");
 
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
+	injectAnalytics({ mode: dev ? "development" : "production" });
 </script>
 
 <ModeWatcher />

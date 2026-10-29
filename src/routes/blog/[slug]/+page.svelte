@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Badge from '$lib/components/ui/badge/badge.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
-	import { getProjectForPost } from '$lib/relations';
-	import { formatDate } from '$lib/utils';
-	import { CodeIcon, SparklesIcon } from 'lucide-svelte';
+	import Badge from "$lib/components/ui/badge/badge.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Separator from "$lib/components/ui/separator/separator.svelte";
+	import { getProjectForPost } from "$lib/relations";
+	import { formatDate } from "$lib/utils";
+	import { CodeIcon, SparklesIcon } from "lucide-svelte";
 
 	export let data;
 
-	$: aiAssisted = data.meta['ai_assisted'] === true;
-	$: relatedProject = getProjectForPost(data.meta['project']);
+	$: aiAssisted = data.meta["ai_assisted"] === true;
+	$: relatedProject = getProjectForPost(data.meta["project"]);
 </script>
 
 <!-- SEO -->
@@ -44,10 +44,14 @@
 <article>
 	<!-- Title -->
 	<hgroup class="mb-1">
-		<h1 class="title max-w-[650px] text-3xl font-medium capitalize tracking-tighter">
+		<h1
+			class="title max-w-[650px] text-3xl font-medium capitalize tracking-tighter"
+		>
 			{data.meta.title}
 		</h1>
-		<div class="mb-3 mt-2 flex max-w-[650px] items-center justify-between text-sm">
+		<div
+			class="mb-3 mt-2 flex max-w-[650px] items-center justify-between text-sm"
+		>
 			<p class="text-sm text-neutral-600 dark:text-neutral-400">
 				{formatDate(data.meta.date)}
 			</p>
@@ -76,7 +80,10 @@
 		<p class="mb-2 flex items-center gap-1 text-xs text-muted-foreground">
 			<CodeIcon class="size-3" strokeWidth={1.5} />
 			Related project:
-			<a href="/#projects" class="underline underline-offset-2 hover:text-foreground">
+			<a
+				href="/#projects"
+				class="underline underline-offset-2 hover:text-foreground"
+			>
 				{relatedProject.title}
 			</a>
 		</p>

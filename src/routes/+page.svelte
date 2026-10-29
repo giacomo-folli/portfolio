@@ -1,12 +1,12 @@
 <script lang="ts">
-	import BlurFade from '$lib/components/magic/BlurFade.svelte';
-	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
-	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
-	import * as Avatar from '$lib/components/ui/avatar';
+	import BlurFade from "$lib/components/magic/BlurFade.svelte";
+	import ProjectCard from "$lib/components/portfolio/ProjectCard.svelte";
+	import ResumeCard from "$lib/components/portfolio/ResumeCard.svelte";
+	import * as Avatar from "$lib/components/ui/avatar";
 	// import Badge from '$lib/components/ui/badge/badge.svelte';
-	import { DATA } from '$lib/data/resume';
-	import { buildPostByProject, relatedPostLink } from '$lib/relations';
-	import { marked } from 'marked';
+	import { DATA } from "$lib/data/resume";
+	import { buildPostByProject, relatedPostLink } from "$lib/relations";
+	import { marked } from "marked";
 
 	export let data: any;
 
@@ -36,7 +36,10 @@
 	<meta name="twitter:image" content={DATA.img} />
 	<meta name="twitter:description" content={DATA.description} />
 
-	<meta name="google-site-verification" content="your-google-verification-code" />
+	<meta
+		name="google-site-verification"
+		content="your-google-verification-code"
+	/>
 	<meta name="yandex-verification" content="your-yandex-verification-code" />
 </svelte:head>
 <main class="flex min-h-[100dvh] flex-col space-y-10">
@@ -129,13 +132,17 @@
 		<div class="w-full">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col space-y-2">
-					<div class="inline-flex w-fit rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+					<div
+						class="inline-flex w-fit rounded-lg bg-foreground px-3 py-1 text-sm text-background"
+					>
 						My Projects
 					</div>
-					<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Things I build and keep alive</h2>
+					<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+						Things I build and keep alive
+					</h2>
 					<p class="max-w-[600px] text-pretty text-muted-foreground md:text-lg">
-						A walk through the open source projects I've built and maintained, from system
-						programming to web apps.
+						A walk through the open source projects I've built and maintained,
+						from system programming to web apps.
 					</p>
 				</div>
 			</BlurFade>
@@ -158,7 +165,10 @@
 								tags={project.technologies}
 								image={project.image}
 								video={project.video}
-								links={[...project.links, ...relatedPostLink(postByProject[project.title])]}
+								links={[
+									...project.links,
+									...relatedPostLink(postByProject[project.title]),
+								]}
 							/>
 						</BlurFade>
 					</li>
