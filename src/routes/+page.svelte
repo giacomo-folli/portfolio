@@ -132,18 +132,21 @@
 		<div class="w-full">
 			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col space-y-2">
-					<div
+					<!-- <div
 						class="inline-flex w-fit rounded-lg bg-foreground px-3 py-1 text-sm text-background"
 					>
 						My Projects
-					</div>
-					<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+					</div> -->
+					<!-- <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
 						Things I build and keep alive
-					</h2>
-					<p class="max-w-[600px] text-pretty text-muted-foreground md:text-lg">
+					</h2> -->
+
+					<h2 class="text-xl font-bold">My Projects</h2>
+
+					<!-- <p class="max-w-[600px] text-pretty text-muted-foreground text-sm">
 						A walk through the open source projects I've built and maintained,
 						from system programming to web apps.
-					</p>
+					</p> -->
 				</div>
 			</BlurFade>
 
