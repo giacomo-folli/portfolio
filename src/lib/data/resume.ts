@@ -221,6 +221,24 @@ export let DATA = {
       video: "",
     },
     {
+      title: "Strava-Declutter",
+      href: "https://github.com/giacomo-folli/Strava-Declutter",
+      dates: "2026",
+      active: false,
+      description:
+        "A small Firefox extension that declutters the Strava web interface by hiding or simplifying UI elements for a cleaner experience.",
+      technologies: ["WebExtension", "Javascript", "CSS"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/giacomo-folli/Strava-Declutter",
+          icon: Github,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
       title: "strava-ai",
       href: "https://github.com/giacomo-folli/strava-ai",
       dates: "2025",
@@ -262,25 +280,6 @@ export let DATA = {
       image: "",
       video: "",
     },
-    {
-      title: "Strava-Declutter",
-      href: "https://github.com/giacomo-folli/Strava-Declutter",
-      dates: "2026",
-      active: false,
-      description:
-        "A small Firefox extension that declutters the Strava web interface by hiding or simplifying UI elements for a cleaner experience.",
-      technologies: ["WebExtension", "Javascript", "CSS"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/giacomo-folli/Strava-Declutter",
-          icon: Github,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-
     {
       title: "Wine-Shop",
       href: "https://github.com/giacomo-folli/Wine-Shop",
