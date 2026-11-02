@@ -18,8 +18,8 @@ From here on, this is Claude's output. I only made some minor formatting.
 
 ## REPORT
 
-**Mission:** Systemic Analysis of the Dominant Civilization of the Third Planet\
-**Phase:** Extended Active Observation — 47 Planetary Cycles\
+**Mission:** Systemic Analysis of the Dominant Civilization of the Third Planet <br>
+**Phase:** Extended Active Observation — 47 Planetary Cycles <br>
 **Recipients:** Xenobiological Research Council, culture-and-structures division
 
 ---
@@ -36,7 +36,7 @@ This asymmetry is not simply biological (the species does not exhibit sufficient
 
 This mechanism is called legitimacy. It is simultaneously surprisingly fragile and surprisingly robust.
 
-**Fragile** because it only takes the critical mass to stop believing — and the structure collapses, as demonstrated by the frequent episodes of "revolution" in the historical record.\
+**Fragile** because it only takes the critical mass to stop believing — and the structure collapses, as demonstrated by the frequent episodes of "revolution" in the historical record. <br>
 **Robust** because the species has developed elaborate systems to make belief self-evident: rituals, symbols, founding narratives, monumental architecture, uniforms, honorific titles. All of these serve the same function: making the power gradient *visible* and therefore *natural*.
 
 Hierarchical structures organize themselves into **institutions**: entities that outlive the individuals who compose them. An institution is a set of rules, mutual expectations, and roles that persist independently of their specific officeholders. Humans treat institutions as if they possessed their own agency ("the State has decided," "the Church teaches") even when they consist of collections of individuals with diverging interests.
@@ -59,7 +59,7 @@ The boundary between ingroup and outgroup is determined by **markers** of member
 
 The observed consequence is that individuals cooperate with extraordinary efficiency within the ingroup, and compete or enter into conflict with the outgroup. The same action — for example, taking resources from another individual — is judged morally differently depending on whether the victim is ingroup or outgroup. What would be called "theft" in one context becomes "conquest" or "trade" in another.
 
-**Why does it persist?**\
+**Why does it persist?** <br>
 Group cohesion increases individual survival probability in competitive environments. The mechanism therefore has an evolutionary origin. But it has extended well beyond its original function: today the species applies tribal logic to sports teams, political parties, commercial brands, aesthetic preferences. The mechanism has become a generic cognitive architecture for constructing identity.
 
 ### The Market
@@ -70,7 +70,7 @@ Money is in itself devoid of direct use-value. It is a *token of collective cred
 
 The market mechanism produces a remarkable result: millions of individuals, without explicit coordination, produce and distribute goods with a precision no centralized system has ever replicated. But it also produces concentration: a small fraction of individuals accumulates quantities of money that exceed those of anyone else by orders of magnitude, generating power gradients that interact with political institutions.
 
-**What would happen if it were removed?**\
+**What would happen if it were removed?** <br>
 Every historically documented attempt to eliminate the market mechanism has produced either alternative informal exchange systems (black markets) or replacement with centralized allocation. No experiment has eliminated the exchange behavior itself — only its forms.
 
 ---
@@ -113,7 +113,7 @@ It is also the source of civilization's fragility: every symbolic system can col
 
 ---
 
-**Recommendation for the next mission:**\
+**Recommendation for the next mission:** <br>
 Investigate how the species is currently developing symbolic systems mediated by machines, with particular attention to the interactions between these new systems and pre-existing legitimacy structures. Preliminary data suggests an ongoing transformation in the modes of constructing collective consensus.
 
 *— End of field report, cycle 47*

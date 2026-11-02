@@ -21,14 +21,14 @@ I forgot how to put real effort in a difficult task. Or probably, I forgot why i
 Because I know it's important.
 Heck, it's the only way to build a meaningful life. It's not handed to you. You have to work for it.
 
-I fear, deep down, I don't care to achieve things anymore, I don't care for success or anything else related. Or maybe I'm scared of putting in the work and still fail.\
+I fear, deep down, I don't care to achieve things anymore, I don't care for success or anything else related. Or maybe I'm scared of putting in the work and still fail. <br>
 Either way, the result is that I am not happy with how I do things right now.
 
 I need to make some changes.
 
 ---
 
-_this post will be updated with some actionable steps I will commit to do._\
+_this post will be updated with some actionable steps I will commit to do._ <br>
 _wish me luck :)_
 
   

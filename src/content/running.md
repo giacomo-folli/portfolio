@@ -22,10 +22,10 @@ Those same times, I discovered that a run, not even too long, removed most of th
 
 Running is a break. 
 
-I stop thinking about the fact that I'm behind with my studies or have problems at work or whatever else and I focus on the present, _on putting one foot in front of the other and controlling my breathing_. \\
+I stop thinking about the fact that I'm behind with my studies or have problems at work or whatever else and I focus on the present, _on putting one foot in front of the other and controlling my breathing_. <br>
 This helps me a lot, because it reminds me that there's a world of other things that continue to exist even if something goes wrong.
 
-Running is just another commitment, another challenge, another exam I can train for knowing that the result depends completely on me and me alone. \\
+Running is just another commitment, another challenge, another exam I can train for knowing that the result depends completely on me and me alone. <br>
 Other observations about my runs:
 1. My left knee often hurts
 1. I generally sleep better the days after

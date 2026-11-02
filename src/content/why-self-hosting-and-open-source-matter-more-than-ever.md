@@ -22,11 +22,11 @@ lang: en
 
 In today's world everything you do online can be tracked, stored and monetized.
 
-Free apps, smart devices, AI assistants  -  they all come with a hidden cost: your data. \\
+Free apps, smart devices, AI assistants  -  they all come with a hidden cost: your data. <br>
 Even the platforms you trust most are constantly harvesting information under the name of "personalization" or "improving user experience."
 
 The explosion of AI has only made things worse. Privacy policies are just legal shields, and regulation is still stuck in the 2010s.
-So yeah, in 2025, digital privacy is… _tricky_. \\ But lately there's a simple and alternative way that's becoming more and more popular.
+So yeah, in 2025, digital privacy is… _tricky_. <br> But lately there's a simple and alternative way that's becoming more and more popular.
 
 ### Open source software changes the game.
 It's transparent and community-driven so there are no black boxes. Self-hosting takes this one step further :  it puts you in the driver's seat.

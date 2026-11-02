@@ -27,11 +27,11 @@ I read an interesting [article](https://www.thecut.com/article/brooding-friction
 If we apply this to social media, their primary "utility" seems to be the removal of two specific inconveniences:
 1. The discomfort of being alone.
 2. The anxiety of feeling lost.
-\
-\
+
+<br>
 
 ---
-\
+
 
 The "human hurdle" of loneliness has existed since the dawn of time. In our early history, social isolation was a death sentence; we needed others to survive the harsh conditions of life.[^3]
 
@@ -45,7 +45,7 @@ I always thought an afternoon of solitude or uncertainty about the future were '
 
 Surely, it is comforting to think that I can reinvent myself with just a *click* or to prove that I'm doing _just fine.(tm)_ But if we silence these _annoyances_ every time they surface, we stop questioning ourselves. We stop searching for solutions that are authentically ours.
 
-Perhaps, then, the utility of social media is indeed to remove the friction of living: the boredom of solitude, the anxiety of choice, the weight of feeling lost... and apparently, they succeed at this brilliantly.\ 
+Perhaps, then, the utility of social media is indeed to remove the friction of living: the boredom of solitude, the anxiety of choice, the weight of feeling lost... and apparently, they succeed at this brilliantly. <br>
 But being "useful" is not the same as making us better. Sometimes, it simply turns us into spectators of one existence that becomes increasingly flat. 
 
 So... **What is left of us when the road becomes completely smooth?**
