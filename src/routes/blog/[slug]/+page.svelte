@@ -8,8 +8,6 @@
 
 	export let data;
 
-	console.log("data", data);
-
 	$: aiAssisted = data.meta["ai_assisted"] === true;
 	$: relatedProject = getProjectForPost(data.meta?.["project"]);
 </script>
