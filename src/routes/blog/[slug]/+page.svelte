@@ -8,8 +8,10 @@
 
 	export let data;
 
+	console.log("data", data);
+
 	$: aiAssisted = data.meta["ai_assisted"] === true;
-	$: relatedProject = getProjectForPost(data.meta["project"]);
+	$: relatedProject = getProjectForPost(data.meta?.["project"]);
 </script>
 
 <!-- SEO -->
@@ -41,6 +43,7 @@
 		Back</Button
 	>
 </div>
+
 <article>
 	<!-- Title -->
 	<hgroup class="mb-1">
@@ -53,7 +56,7 @@
 			class="mb-3 mt-2 flex max-w-[650px] items-center justify-between text-sm"
 		>
 			<p class="text-sm text-neutral-600 dark:text-neutral-400">
-				{formatDate(data.meta.date)}
+				{formatDate(new Date(data.meta.date).toISOString())}
 			</p>
 			{#if aiAssisted}
 				<Badge
@@ -68,12 +71,14 @@
 		</div>
 	</hgroup>
 
-	<!-- Tags -->
-	<div class="tags mb-2 flex space-x-2">
-		{#each data.meta.categories as category}
-			<Badge variant="outline" class="rounded-[4px]">{category}</Badge>
-		{/each}
-	</div>
+	{#if data?.meta?.categories}
+		<!-- Tags -->
+		<div class="tags mb-2 flex space-x-2">
+			{#each data.meta.categories as category}
+				<Badge variant="outline" class="rounded-[4px]">{category}</Badge>
+			{/each}
+		</div>
+	{/if}
 
 	<!-- Related project -->
 	{#if relatedProject}

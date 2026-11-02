@@ -122,9 +122,8 @@ Investigate how the species is currently developing symbolic systems mediated by
 
 
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->
 
 <style>
 .report {

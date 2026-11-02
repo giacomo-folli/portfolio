@@ -25,6 +25,5 @@ P.S. I suppose writing is a useful way to interrupt the endless flow of chores a
 
 
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->

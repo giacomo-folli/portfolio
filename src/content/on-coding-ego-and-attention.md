@@ -23,6 +23,5 @@ I think it's also an effort that the community needs to make, because if so many
 
 
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->

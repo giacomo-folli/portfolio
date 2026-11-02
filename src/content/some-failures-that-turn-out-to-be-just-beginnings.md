@@ -18,6 +18,5 @@ Some failures that turn out to be just beginnings:
 \
 \
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->

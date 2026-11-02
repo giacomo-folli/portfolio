@@ -66,6 +66,5 @@ A typical blog post for me might be around 1500 words, or about 2.5 hours to wri
 
 Writing takes a lot longer than that if you’re trying to make _one particular post very good_, but I don’t think that’s the right strategy for someone who's starting out.
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->

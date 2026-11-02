@@ -20,6 +20,5 @@ I still struggle to remind myself that I'm the only one who can set standards th
 That's definitely one metric I find useful: *"What kind of tomorrow am I building with today's choices?"*
 
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->

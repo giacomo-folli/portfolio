@@ -18,6 +18,5 @@ I want to learn to nurture the attention to all the things that went well, witho
 Nurture gratitude over judgement.
 
 
-<div style="width:100%; display:flex; justify-content:center; gap:20px;">
-{{ previous_post }} {{ next_post }}
-</div>
+<!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
+{{ previous_post }} {{ next_post }}</div> -->
