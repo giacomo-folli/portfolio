@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Badge from "$lib/components/ui/badge/badge.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
 	import Separator from "$lib/components/ui/separator/separator.svelte";
 	import { getProjectForPost } from "$lib/relations";
 	import { formatDate } from "$lib/utils";
@@ -18,29 +17,6 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
-
-<div class="-mt-10">
-	<Button
-		href="/blog"
-		style="padding: 0 0px !important; background:transparent; border:none;"
-		class=" mb-2 h-6 border-none bg-transparent text-xs text-muted-foreground outline-none"
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="14"
-			height="14"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="1.2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="lucide lucide-arrow-left mb-px mr-1"
-			><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
-		>
-		Back</Button
-	>
-</div>
 
 <article>
 	<!-- Title -->
