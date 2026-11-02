@@ -15,8 +15,8 @@ Some failures that turn out to be just beginnings:
 * **When I broke my laptop with all my music project on it**, then I found again the joy of picking up a real instrument and just play
 * **When the train gets cancelled last minute** and I treat myself to a coffee at the bar while waiting for the next one
 * **When a rainy day** forces me to find a new book to start
-\
-\
+
+<br>
 
 <!-- <div style="width:100%; display:flex; justify-content:center; gap:20px;">
 {{ previous_post }} {{ next_post }}</div> -->

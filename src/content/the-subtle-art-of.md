@@ -16,6 +16,6 @@ Small things that take more conscious thought than they’re given credit for.
 * Choosing the right song for a specific situation
 * Commuting without the dread
 
-\
-\
+<br>
+
 _Idea taken from [futureperfect blog](https://futureperfect.bearblog.dev/the-subtle-art-of/)_
