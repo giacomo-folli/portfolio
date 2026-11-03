@@ -78,7 +78,7 @@ export function getPortfolio(locale: Locale) {
     description:
       "Sviluppatore software full-stack, studente di ingegneria e manutentore di sistemi operativi. Mi piacciono i computer e tutto ciò che ci gira intorno.",
     summary:
-      "sviluppatore full-stack con esperienza in produzione con Svelte, Node.js, AdonisJS, PostgreSQL e MongoDB. Oltre al lavoro con i clienti, porto avanti progetti open source personali, dalla programmazione di sistema in Rust e Go alle integrazioni con l’IA.\n\nMi piace circondarmi di musica, elettronica e amici.",
+      "Sviluppatore full-stack con esperienza in produzione con Svelte, Node.js, AdonisJS, PostgreSQL e MongoDB. Oltre al lavoro con i clienti, porto avanti progetti open source personali, dalla programmazione di sistema in Rust e Go alle integrazioni con l’IA.\n\nMi piace circondarmi di musica, elettronica e amici.",
     work: DATA.work.map((job, index) =>
       index === 0
         ? {
