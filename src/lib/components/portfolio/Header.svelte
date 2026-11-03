@@ -1,18 +1,21 @@
 <script lang="ts">
-	import { page } from "$app/stores";
 	import { DATA } from "$lib/data/resume";
 	import ModeToggle from "./ModeToggle.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
 	import { messages, type Locale } from "$lib/i18n";
 
+	// import { page } from "$app/stores";
+	// import Button from "$lib/components/ui/button/button.svelte";
+
+	// $: notHome = $page.url.pathname.startsWith("/blog/");
+
 	export let locale: Locale;
-	$: notHome = $page.url.pathname.startsWith("/blog/");
+
 	$: copy = messages[locale];
 </script>
 
 <header class="text-sm">
 	<nav class="flex flex-wrap items-center gap-x-6 gap-y-3" aria-label="Header">
-		{#if notHome}
+		<!-- {#if notHome}
 			<Button
 				href="/blog"
 				class="border-none p-0 bg-transparent text-muted-foreground outline-none hover:bg-inherit"
@@ -32,7 +35,7 @@
 				>
 				{copy.back}</Button
 			>
-		{/if}
+		{/if} -->
 
 		{#each DATA.navbar as item}
 			<a
