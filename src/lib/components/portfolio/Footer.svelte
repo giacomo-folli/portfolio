@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { DATA } from '$lib/data/resume';
+	import { messages, type Locale } from '$lib/i18n';
 	// import ModeToggle from './ModeToggle.svelte';
 	import { mode } from 'mode-watcher';
 	$: theme = $mode;
+	$: copy = messages[$page.data.locale as Locale];
 </script>
 
 <footer class="mt-16 flex flex-col gap-6 border-t pt-8 text-sm">
@@ -25,7 +28,7 @@
 	<nav class="w-full flex flex-wrap justify-between items-center gap-x-6 gap-y-3" aria-label="Social links">
 		<div>
 			<span>
-				Say hello: 
+				{copy.sayHello}
 			</span>
 				</div>
 

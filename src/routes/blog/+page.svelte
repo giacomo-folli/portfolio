@@ -23,7 +23,7 @@
 						<div class="flex w-full flex-col">
 							<p class="tracking-tight">{post.title}</p>
 							<p class="h-6 text-xs text-muted-foreground">
-								{formatDate(new Date(post.date).toISOString())}
+								{formatDate(new Date(post.date).toISOString(), "medium", data.locale)}
 							</p>
 						</div>
 					</a>

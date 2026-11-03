@@ -4,9 +4,11 @@
 	import { getProjectForPost } from "$lib/relations";
 	import { formatDate } from "$lib/utils";
 	import { CodeIcon, SparklesIcon } from "lucide-svelte";
+	import { messages } from "$lib/i18n";
 
 	export let data;
 
+	$: copy = messages[data.locale];
 	$: aiAssisted = data.meta["ai_assisted"] === true;
 	$: relatedProject = getProjectForPost(data.meta?.["project"]);
 </script>
@@ -30,16 +32,16 @@
 			class="mb-3 mt-2 flex max-w-[650px] items-center justify-between text-sm"
 		>
 			<p class="text-sm text-neutral-600 dark:text-neutral-400">
-				{formatDate(new Date(data.meta.date).toISOString())}
+				{formatDate(new Date(data.meta.date).toISOString(), "medium", data.locale)}
 			</p>
 			{#if aiAssisted}
 				<Badge
 					variant="outline"
 					class="gap-1 rounded-[4px] font-normal text-muted-foreground"
-					title="This post was drafted and edited with the help of AI tools"
+					title={copy.aiAssistedTitle}
 				>
 					<SparklesIcon class="size-3" strokeWidth={1.5} />
-					Written with AI help
+					{copy.writtenWithAi}
 				</Badge>
 			{/if}
 		</div>
@@ -58,7 +60,7 @@
 	{#if relatedProject}
 		<p class="mb-2 flex items-center gap-1 text-xs text-muted-foreground">
 			<CodeIcon class="size-3" strokeWidth={1.5} />
-			Related project:
+			{copy.relatedProject}
 			<a
 				href="/#projects"
 				class="underline underline-offset-2 hover:text-foreground"

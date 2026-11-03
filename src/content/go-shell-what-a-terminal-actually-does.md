@@ -7,7 +7,7 @@ categories:
   - systems
 published: true
 ai_assisted: true
-project: go-shell
+# project: go-shell
 ---
 
 ## The premise

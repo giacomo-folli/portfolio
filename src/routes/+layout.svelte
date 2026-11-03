@@ -1,4 +1,5 @@
 <script>
+	import { page } from "$app/stores";
 	import Footer from "$lib/components/portfolio/Footer.svelte";
 	import Header from "$lib/components/portfolio/Header.svelte";
 
@@ -10,12 +11,14 @@
 	setMode("dark");
 
 	injectAnalytics({ mode: dev ? "development" : "production" });
+
+	$: locale = $page.data.locale;
 </script>
 
 <ModeWatcher />
 
 <div class="mx-auto max-w-2xl bg-background px-6 font-sans antialiased">
-	<Header />
+	<Header {locale} />
 </div>
 
 <div

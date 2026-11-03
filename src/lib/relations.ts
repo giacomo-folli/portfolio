@@ -1,5 +1,6 @@
 import { NotebookPenIcon } from 'lucide-svelte';
 import { DATA } from '$lib/data/resume';
+import { messages, type Locale } from '$lib/i18n';
 import type { Post } from '$lib/types';
 
 type Project = (typeof DATA.projects)[number];
@@ -32,7 +33,7 @@ export function buildPostByProject(posts: Post[]): Record<string, Post> {
 }
 
 /** A ProjectCard `links` entry pointing at the related post, or nothing. */
-export function relatedPostLink(post: Post | undefined) {
+export function relatedPostLink(post: Post | undefined, locale: Locale = 'en') {
 	if (!post) return [];
-	return [{ type: 'Post', href: `/blog/${post.slug}`, icon: NotebookPenIcon, internal: true }];
+	return [{ type: messages[locale].post, href: `/blog/${post.slug}`, icon: NotebookPenIcon, internal: true }];
 }

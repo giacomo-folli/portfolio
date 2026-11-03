@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from "./$types";
 	import BlurFade from "$lib/components/magic/BlurFade.svelte";
 	import ProjectCard from "$lib/components/portfolio/ProjectCard.svelte";
 	import ResumeCard from "$lib/components/portfolio/ResumeCard.svelte";
@@ -7,24 +8,27 @@
 	import { DATA } from "$lib/data/resume";
 	import { buildPostByProject, relatedPostLink } from "$lib/relations";
 	import { marked } from "marked";
+	import { getPortfolio, messages } from "$lib/i18n";
 
-	export let data: any;
+	export let data: PageData;
 
 	let BLUR_FADE_DELAY = 0.04;
 	const age = new Date().getFullYear() - DATA.birth_year;
+	$: portfolio = getPortfolio(data.locale);
+	$: copy = messages[data.locale];
 
 	$: postByProject = buildPostByProject(data.posts);
 </script>
 
 <svelte:head>
 	<title>{DATA.name}</title>
-	<meta name="description" content={DATA.description} />
+	<meta name="description" content={portfolio.description} />
 	<meta property="og:title" content={DATA.name} />
-	<meta property="og:description" content={DATA.description} />
+	<meta property="og:description" content={portfolio.description} />
 	<meta property="og:url" content={DATA.url} />
 	<meta property="og:site_name" content={DATA.name} />
 	<meta property="og:image" content={DATA.img} />
-	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale" content={data.locale === "it" ? "it_IT" : "en_US"} />
 	<meta property="og:type" content="website" />
 	<meta name="robots" content="index, follow" />
 	<meta
@@ -34,7 +38,7 @@
 	<meta name="twitter:title" content={DATA.name} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content={DATA.img} />
-	<meta name="twitter:description" content={DATA.description} />
+	<meta name="twitter:description" content={portfolio.description} />
 
 	<meta
 		name="google-site-verification"
@@ -50,10 +54,10 @@
 					<BlurFade
 						delay={BLUR_FADE_DELAY}
 						class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-						yOffset={8}>Hi, Giacomo here</BlurFade
+						yOffset={8}>{copy.greeting}</BlurFade
 					>
 					<BlurFade class="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY}
-						>{age} year old something guy.</BlurFade
+						>{copy.age(age)}</BlurFade
 					>
 				</div>
 				<BlurFade delay={BLUR_FADE_DELAY}>
@@ -68,13 +72,13 @@
 
 	<section id="about">
 		<BlurFade delay={BLUR_FADE_DELAY}>
-			<h2 class="text-xl font-bold">About</h2>
+			<h2 class="text-xl font-bold">{copy.about}</h2>
 		</BlurFade>
 		<BlurFade delay={BLUR_FADE_DELAY * 1.4}>
 			<div
 				class="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
 			>
-				{@html marked(DATA.summary)}
+				{@html marked(portfolio.summary)}
 			</div>
 		</BlurFade>
 	</section>
@@ -82,9 +86,9 @@
 	<section id="work">
 		<div class="flex min-h-0 flex-col gap-y-3">
 			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold">Work Experience</h2>
+				<h2 class="text-xl font-bold">{copy.workExperience}</h2>
 			</BlurFade>
-			{#each DATA.work as work, id}
+			{#each portfolio.work as work, id}
 				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
 					<ResumeCard {...work} />
 				</BlurFade>
@@ -141,7 +145,7 @@
 						Things I build and keep alive
 					</h2> -->
 
-					<h2 class="text-xl font-bold">My Projects</h2>
+					<h2 class="text-xl font-bold">{copy.projects}</h2>
 
 					<!-- <p class="max-w-[600px] text-pretty text-muted-foreground text-sm">
 						A walk through the open source projects I've built and maintained,
@@ -153,7 +157,7 @@
 			<ol
 				class="relative mt-10 space-y-10 before:absolute before:bottom-4 before:left-0 before:top-2 before:w-px before:bg-gradient-to-b before:from-border before:via-border before:to-transparent"
 			>
-				{#each DATA.projects as project, id}
+				{#each portfolio.projects as project, id}
 					<li class="relative pl-8">
 						<span
 							aria-hidden="true"
@@ -170,7 +174,7 @@
 								video={project.video}
 								links={[
 									...project.links,
-									...relatedPostLink(postByProject[project.title]),
+									...relatedPostLink(postByProject[project.title], data.locale),
 								]}
 							/>
 						</BlurFade>

@@ -3,8 +3,11 @@
 	import { DATA } from "$lib/data/resume";
 	import ModeToggle from "./ModeToggle.svelte";
 	import Button from "$lib/components/ui/button/button.svelte";
+	import { messages, type Locale } from "$lib/i18n";
 
+	export let locale: Locale;
 	$: notHome = $page.url.pathname.startsWith("/blog/");
+	$: copy = messages[locale];
 </script>
 
 <header class="text-sm">
@@ -27,7 +30,7 @@
 					class="lucide lucide-arrow-left mb-px mr-1"
 					><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
 				>
-				Back</Button
+				{copy.back}</Button
 			>
 		{/if}
 
@@ -37,7 +40,7 @@
 				class="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
 			>
 				<svelte:component this={item.icon} class="size-4" strokeWidth={1.5} />
-				{item.label}
+				{item.href === "/" ? copy.home : item.label}
 			</a>
 		{/each}
 
