@@ -17,8 +17,10 @@
 
 <ModeWatcher />
 
-<div class="mx-auto max-w-2xl bg-background px-6 font-sans antialiased">
-	<Header {locale} />
+<div class="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+	<div class="mx-auto max-w-2xl px-6 font-sans antialiased">
+		<Header {locale} />
+	</div>
 </div>
 
 <div
