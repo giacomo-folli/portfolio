@@ -1,6 +1,9 @@
 import {
+	BrickWallIcon,
 	ChartNetwork,
 	CodeIcon,
+	ExternalLink,
+	ExternalLinkIcon,
 	Github,
 	Globe,
 	HomeIcon,
@@ -211,6 +214,11 @@ export let DATA = {
 					icon: Github,
 				},
 				{
+					type: "Crates.io",
+					href: "https://crates.io/crates/asmlings",
+					icon: ExternalLinkIcon,
+				},
+				{
 					type: "Website",
 					href: "https://giacomo-folli.github.io/asmlings-web",
 					icon: Globe,
@@ -233,6 +241,11 @@ export let DATA = {
 					type: "Source",
 					href: "https://github.com/giacomo-folli/Strava-Declutter",
 					icon: Github,
+				},
+				{
+					type: "Mozilla Addons Store",
+					href: "https://addons.mozilla.org/it/firefox/addon/strava-declutter/",
+					icon: ExternalLink,
 				},
 			],
 			image: "",
