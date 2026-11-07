@@ -47,7 +47,7 @@ export let DATA = {
 	description:
 		"Full-Stack Software Developer, Engineering Student, OS Mantainer. I like computers & co.",
 	summary:
-		"Full-stack developer with production experience in Svelte, Node.js, AdonisJS, PostgreSQL and MongoDB. next to client work i keep open source side projects alive, from system programming in Rust and Go to AI integrations.\n\ni like to surround myself with music, electronics and friends.",
+		"Full-stack developer with production experience in Svelte, Node.js, AdonisJS, PostgreSQL and MongoDB. next to client work i keep open source side projects alive, from system programming in Rust and Go to AI integrations.",
 	avatarUrl: "https://giacomofolli.com/profile.png",
 	skills: [
 		{ title: "Typescript" },
