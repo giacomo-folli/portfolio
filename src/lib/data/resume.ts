@@ -229,6 +229,24 @@ export let DATA = {
 			video: "",
 		},
 		{
+			title: "Bpmd",
+			href: "https://github.com/giacomo-folli/bpmd",
+			dates: "2026",
+			active: true,
+			description:
+				"A server-side daemon that watches your music directory, detects the BPM of new songs and writes the BPM tag directly into the files.",
+			technologies: ["Go", "Navidrome", "Linux"],
+			links: [
+				{
+					type: "Source",
+					href: "https://github.com/giacomo-folli/bpmd",
+					icon: Github,
+				},
+			],
+			image: "",
+			video: "",
+		},
+		{
 			title: "Strava-Declutter",
 			href: "https://github.com/giacomo-folli/Strava-Declutter",
 			dates: "2026",
